@@ -10,14 +10,20 @@ Before you begin, ensure that you have the following prerequisites installed:
 > - `apt install git`
 > - `npm install pm2@latest -g`
 
+
 ### ✔️ Run
 
 1. Clone the repository:
 ```sh
-git clone https://github.com/blipn/topia-node
+git clone https://github.com/blipn/topia-node --recurse-submodules
 ```
 
-2. Start the server:
+2. Change the current directory:
+```sh
+cd topia-node
+```
+
+3. Start the server (daemon):
 ```sh
 pm2 start index.js --restart-delay 5000 --name topia
 ```
@@ -33,12 +39,9 @@ pm2 restart topia
 pm2 reload topia
 pm2 stop topia
 pm2 delete topia
-pm2 logs
+pm2 logs topia
 pm2 list
 pm2 plus
 ```
-
-
-
 
 ---
