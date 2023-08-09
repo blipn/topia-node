@@ -1,0 +1,3 @@
+[submodule "hytopia-full-node"]
+	path = hytopia-full-node
+	url = https://github.com/Topia-Game/hytopia-full-node
