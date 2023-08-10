@@ -4,12 +4,12 @@ A simple node.js server that run & log a Hytopia node via PM2
 
 ## 🚀 Getting Started
 
-### 💻 Installation
+### 💻 Installation (Ubuntu/Debian)
 
 Before you begin, ensure that you have the following prerequisites installed:
-> - `apt install git`
-> - `npm install pm2@latest -g`
-
+> - `sudo apt install git`
+> - `curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - && sudo apt-get install -y nodejs`
+> - `sudo npm install pm2@latest -g`
 
 ### ✔️ Run
 
