@@ -25,7 +25,12 @@ cd topia-node
 
 3. Start the server (daemon):
 ```sh
-pm2 start index.js --restart-delay 5000 --name topia
+pm2 start index.js --restart-delay 5000 --name topia-testnet
+```
+
+or. Start the server on mainnet:
+```sh
+pm2 start index.js --restart-delay 5000 --name topia-mainnet -- -m
 ```
 
 ### 🧪 Monitor

@@ -1,6 +1,12 @@
 const { spawn } = require('node:child_process');
 
-const HYTOPIA_NETWORK = 'testnet'
+
+let HYTOPIA_NETWORK = 'testnet'
+process.argv.forEach((val) => {
+  if(val === '--mainnet' || val === '-m') {
+    HYTOPIA_NETWORK = 'mainnet'
+  }
+});
 console.log(`Target network: ${HYTOPIA_NETWORK}`)
 
 const edge = spawn('bash', ['edge.sh'])
