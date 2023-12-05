@@ -46,8 +46,9 @@ function startNode(EDGE_BIN_PATH) {
     `${HYTOPIA_NETWORK}/data`, 
     '--chain', `${HYTOPIA_NETWORK}/genesis.json`,
     '--json-rpc-batch-request-limit', '500',
-    '--seal', 'false', 
-    '2>&1', '|', 'sed', `'s/polygon/hytopia/g'`
+    '--grpc-address', '0.0.0.0:10000', 
+    '--libp2p', '0.0.0.0:10001', 
+    '--jsonrpc', '0.0.0.0:10002',
   ], {cwd: './hytopia-full-node/'})
   node.stdout.on('data', function (data) {
     const content = data.toString()
